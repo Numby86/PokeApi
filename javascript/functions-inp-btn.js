@@ -33,7 +33,7 @@ function createPokemon(pokemon) {
 
     const numPoke = document.createElement('span');
     numPoke.classList.add('num_poke');
-    numPoke.textContent = pokemon.id;
+    numPoke.textContent = "Num: " + pokemon.id;
 
     const namePoke = document.createElement('h3');
     namePoke.classList.add('name_poke');
@@ -47,66 +47,24 @@ function createPokemon(pokemon) {
     statsPoke.classList.add('statsPoke');
     statsPoke.textContent = hp + ' | ' + attack + ' | ' + defense + ' | ' + speed;
 
+    const type1 = pokemon.types[0].type.name;
+    const type2 = pokemon.types[1]?.type?.name;
+
     const typePoke = document.createElement('p');
     typePoke.classList.add('typePoke');
-    typePoke.textContent = pokemon.types[0].type.name;
+    spriteContainer.classList.add(type1);
+    typePoke.textContent = type1;
 
-    if (pokemon.types[0].type.name === 'fire') {
-        spriteContainer.classList.add('fire');
+    if(type2 === 'flying' && type1 === 'normal') {
+        spriteContainer.classList.add(type2);
     }
-    else if(pokemon.types[0].type.name === 'grass') {
-        spriteContainer.classList.add('grass');
+    else if(type2 === 'steel'){
+        spriteContainer.classList.add(type2);
     }
-    else if(pokemon.types[0].type.name === 'poison') {
-        spriteContainer.classList.add('poison');
+    else{
+        spriteContainer.classList.add(type1);
     }
-    else if(pokemon.types[0].type.name === 'water') {
-        spriteContainer.classList.add('water');
-    }
-    else if(pokemon.types[0].type.name === 'bug') {
-        spriteContainer.classList.add('bug');
-    }
-    else if(pokemon.types[0].type.name === 'ground') {
-        spriteContainer.classList.add('ground');
-    }
-    else if(pokemon.types[0].type.name === 'fairy') {
-        spriteContainer.classList.add('fairy');
-    }
-    else if(pokemon.types[0].type.name === 'fighting') {
-        spriteContainer.classList.add('fighting');
-    }
-    else if(pokemon.types[0].type.name === 'psychic') {
-        spriteContainer.classList.add('psychic');
-    }
-    else if(pokemon.types[0].type.name === 'rock') {
-        spriteContainer.classList.add('rock');
-    }
-    else if(pokemon.types[0].type.name === 'ice') {
-        spriteContainer.classList.add('ice');
-    }
-    else if(pokemon.types[0].type.name === 'ghost') {
-        spriteContainer.classList.add('ghost');
-    }
-    else if(pokemon.types[0].type.name === 'dragon') {
-        spriteContainer.classList.add('dragon');
-    }
-    else if(pokemon.types[1].type.name === 'steel') {
-        spriteContainer.classList.add('steel');
-    }
-    else if(pokemon.types[0].type.name === 'electric') {
-        spriteContainer.classList.add('electric');
-    }
-    else if(pokemon.types[1].type.name === 'flying' && pokemon.types[0].type.name === 'normal') {
-        spriteContainer.classList.add('flying');
-    }
-    else if(pokemon.types[0].type.name === 'normal') {
-        spriteContainer.classList.add('normal');
-    }
-    /*const stats = pokemon.stats.map((estadistica, index) => {
-        return estadistica.stat.name + ": " + estadistica.base_stat;
-    });*/
 
-    
     completeCard.appendChild(spriteContainer);
     completeCard.appendChild(numPoke);
     completeCard.appendChild(namePoke);

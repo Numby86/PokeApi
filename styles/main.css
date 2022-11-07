@@ -50,9 +50,35 @@ table {
 body {
   font-family: "cascadia code";
   font-weight: bold;
-  background: linear-gradient(-50deg, rgb(200, 200, 200), rgb(255, 255, 255), rgb(200, 200, 200), rgb(255, 255, 255), rgb(200, 200, 200), rgb(255, 255, 255));
+  background: linear-gradient(-45deg, rgb(160, 160, 160), rgb(255, 255, 255), rgb(160, 160, 160), rgb(255, 255, 255), rgb(160, 160, 160), rgb(255, 255, 255));
+  background-size: 400% 400%;
+  -webkit-animation: fondoLive 2.5s ease infinite;
+          animation: fondoLive 2.5s ease infinite;
 }
 
+@-webkit-keyframes fondoLive {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+@keyframes fondoLive {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
 .header {
   display: flex;
   flex-direction: column;
@@ -142,12 +168,21 @@ h1 {
 }
 
 .main__div2_formPokeFinder button {
+  margin-top: -25px;
+  margin-left: -20px;
   border: 2px solid rgb(90, 90, 90);
-  width: 50px;
-  border-radius: 10px;
-  font-weight: bold;
-  background-color: white;
-  color: rgb(90, 90, 90);
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  background-color: transparent;
+  border: none;
+}
+
+.pokedex-boton {
+  width: 90px;
+  height: 90px;
+  margin-top: -5px;
+  margin-left: -11px;
 }
 
 .main__div2_list-pokemons {
@@ -242,71 +277,71 @@ h1 {
 }
 
 .grass {
-  background-color: rgb(19, 191, 19);
+  background: linear-gradient(lightgreen, rgb(22, 206, 22));
 }
 
 .water {
-  background-color: rgb(76, 198, 255);
+  background: linear-gradient(rgb(76, 198, 255), blue);
 }
 
 .fire {
-  background-color: rgb(255, 174, 0);
+  background: linear-gradient(rgb(255, 136, 0), rgb(255, 57, 57));
 }
 
 .flying {
-  background: linear-gradient(-45deg, brown, lightcyan);
+  background: linear-gradient(rgb(0, 170, 255), beige, brown);
 }
 
 .bug {
-  background-color: lightgreen;
+  background: linear-gradient(rgb(19, 191, 19), brown);
 }
 
 .poison {
-  background-color: purple;
+  background: linear-gradient(-45deg, purple, rgba(128, 0, 128, 0.325));
 }
 
 .normal {
-  background-color: rgb(200, 200, 200);
+  background: linear-gradient(-45deg, rgb(200, 200, 200), gray);
 }
 
 .electric {
-  background-color: rgb(228, 228, 0);
+  background: linear-gradient(-45deg, yellow, rgb(228, 228, 0));
 }
 
 .ground {
-  background-color: rgb(247, 211, 168);
+  background: linear-gradient(-45deg, rgb(247, 211, 168), brown);
 }
 
 .fairy {
-  background-color: pink;
+  background: linear-gradient(-45deg, rgb(255, 151, 210), pink);
 }
 
 .fighting {
-  background-color: rgb(180, 2, 2);
+  background: linear-gradient(-45deg, blue, red, rgb(180, 2, 2));
 }
 
 .psychic {
-  background-color: rgb(77, 6, 77);
+  background: linear-gradient(-45deg, rgb(77, 6, 77), pink);
 }
 
 .rock {
-  background-color: rgb(216, 170, 110);
+  background: linear-gradient(-45deg, grey, rgb(216, 170, 110), rgb(216, 170, 110));
 }
 
 .steel {
-  background: linear-gradient(-45deg, yellow, grey);
+  background: linear-gradient(-45deg, grey, yellow);
 }
 
 .ice {
-  background-color: rgb(192, 246, 246);
+  background: linear-gradient(rgb(145, 214, 214), rgb(192, 246, 246));
 }
 
 .ghost {
-  background-color: black;
+  background: linear-gradient(black, rgba(26, 20, 20, 0.826));
 }
 
 .dragon {
-  background-color: goldenrod;
+  background: linear-gradient(-45deg, goldenrod, lightcyan);
 }
 
 .pokemon_completeCard img {
