@@ -124,23 +124,11 @@ h1 {
           animation: roll 2s 3;
 }
 
-@-webkit-keyframes roll {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+#gameboy {
+  -webkit-animation: move 0.4s 10;
+          animation: move 0.4s 10;
 }
 
-@keyframes roll {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 .main__div1 h2 {
   font-size: 22px;
   padding-top: 3%;
@@ -312,6 +300,83 @@ h1 {
   height: 300px;
 }
 
+.pokemon_completeCard img {
+  width: 300px;
+  height: 300px;
+}
+
+.board {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.board button {
+  grid-row: span 1;
+  width: 200px;
+  height: 200px;
+}
+
+.footer {
+  padding: 20px;
+}
+
+.footer div {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 10px;
+}
+
+.footer__div h2 {
+  font-size: 24px;
+  color: rgb(90, 90, 90);
+}
+
+.footer__div span {
+  color: rgb(90, 90, 90);
+  font-size: 26px;
+}
+
+@-webkit-keyframes roll {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes roll {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes move {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(-5deg);
+  }
+}
+@keyframes move {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(-5deg);
+  }
+}
 .buttonTypes {
   background-color: transparent;
   border: none;
@@ -400,28 +465,107 @@ h1 {
   background: linear-gradient(-45deg, goldenrod, lightcyan);
 }
 
-.pokemon_completeCard img {
-  width: 300px;
-  height: 300px;
-}
-
-.footer {
-  padding: 20px;
-}
-
-.footer div {
+.main_div3 {
   display: flex;
   justify-content: center;
-  align-content: center;
-  gap: 10px;
 }
 
-.footer__div h2 {
-  font-size: 24px;
-  color: rgb(90, 90, 90);
+.main_div3 tr {
+  position: relative;
 }
 
-.footer__div span {
-  color: rgb(90, 90, 90);
-  font-size: 26px;
+.main_div3 button {
+  height: 120px;
+  width: 120px;
+  font-size: 110px;
+  font-weight: bold;
+  color: red;
+  grid-row: span 1;
+  grid-column: span 1;
+}
+
+.notBoard {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  border: 5px solid red;
+  display: none;
+}
+
+#winner {
+  font-size: 40px;
+  font-weight: bold;
+  color: red;
+}
+
+.button1 {
+  background: url("../../images/images_tres-en-raya/bulba.png");
+  background-size: cover;
+  background-position: center;
+  background-position-y: -5px;
+  background-repeat: no-repeat;
+}
+
+.button2 {
+  background: url("../../images/images_tres-en-raya/charmander.png");
+  background-size: cover;
+  background-position: center;
+  background-position-y: 0px;
+  background-repeat: no-repeat;
+}
+
+.button3 {
+  background: url("../../images/images_tres-en-raya/squirtle.png");
+  background-size: cover;
+  background-position: center;
+  background-position-y: -5px;
+  background-repeat: no-repeat;
+}
+
+.button4 {
+  background: url("../../images/images_tres-en-raya/pikachu.png");
+  background-size: cover;
+  background-position: center;
+  background-position-y: -15px;
+  background-repeat: no-repeat;
+}
+
+.button5 {
+  background: url("../../images/images_tres-en-raya/snorlax.png");
+  background-size: 115px;
+  background-position: center;
+  background-position-y: 25px;
+  background-repeat: no-repeat;
+}
+
+.button6 {
+  background: url("../../images/images_tres-en-raya/clefable.png");
+  background-size: cover;
+  background-position: center;
+  background-position-y: -15px;
+  background-repeat: no-repeat;
+}
+
+.button7 {
+  background: url("../../images/images_tres-en-raya/magikarp.png");
+  background-size: cover;
+  background-position: center;
+  background-position-y: 0px;
+  background-repeat: no-repeat;
+}
+
+.button8 {
+  background: url("../../images/images_tres-en-raya/arcanine.png");
+  background-size: 120px;
+  background-position: center;
+  background-position-y: 25px;
+  background-repeat: no-repeat;
+}
+
+.button9 {
+  background: url("../../images/images_tres-en-raya/gengar.png");
+  background-size: cover;
+  background-position: center;
+  background-position-y: 5px;
+  background-repeat: no-repeat;
 }/*# sourceMappingURL=main.css.map */

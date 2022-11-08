@@ -1,0 +1,92 @@
+.main_div3{
+    display: flex;
+    justify-content: center;
+    
+}
+.main_div3 tr{
+    position: relative;
+}
+.main_div3 button {
+    height: 120px;
+    width: 120px;
+    font-size: 110px;
+    font-weight: bold;
+    color: red;
+    grid-row: span 1;
+    grid-column: span 1;
+}
+.notBoard{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    border: 5px solid red;
+    display: none;
+}
+#winner {
+    font-size: 40px;
+    font-weight: bold;
+    color: red;
+}
+.button1{
+    background: url('../../images/images_tres-en-raya/bulba.png');
+    background-size: cover;
+    background-position: center;
+    background-position-y: -5px;
+    background-repeat: no-repeat;
+}
+.button2{
+    background: url('../../images/images_tres-en-raya/charmander.png');
+    background-size: cover;
+    background-position: center;
+    background-position-y: 0px;
+    background-repeat: no-repeat;
+}
+.button3{
+    background: url('../../images/images_tres-en-raya/squirtle.png');
+    background-size: cover;
+    background-position: center;
+    background-position-y: -5px;
+    background-repeat: no-repeat;
+}
+.button4{
+    background: url('../../images/images_tres-en-raya/pikachu.png');
+    background-size: cover;
+    background-position: center;
+    background-position-y: -15px;
+    background-repeat: no-repeat;
+}
+.button5{
+    background: url('../../images/images_tres-en-raya/snorlax.png');
+    background-size: 115px;
+    background-position: center;
+    background-position-y: 25px;
+    background-repeat: no-repeat;
+}
+.button6{
+    background: url('../../images/images_tres-en-raya/clefable.png');
+    background-size: cover;
+    background-position: center;
+    background-position-y: -15px;
+    background-repeat: no-repeat;
+}
+.button7{
+    background: url('../../images/images_tres-en-raya/magikarp.png');
+    background-size: cover;
+    background-position: center;
+    background-position-y: 0px;
+    background-repeat: no-repeat;
+}
+.button8{
+    background: url('../../images/images_tres-en-raya/arcanine.png');
+    background-size: 120px;
+    background-position: center;
+    background-position-y: 25px;
+    background-repeat: no-repeat;
+}
+.button9{
+    background: url('../../images/images_tres-en-raya/gengar.png');
+    background-size: cover;
+    background-position: center;
+    background-position-y: 5px;
+    background-repeat: no-repeat;
+}
