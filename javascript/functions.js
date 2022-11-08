@@ -3,7 +3,7 @@
 const pokemonContainer = document.querySelector('#list-pokemons');
 const pokeList$$ = document.querySelector('#pokeList');
 
-// pokeList$$.addEventListener('click', allPoke);
+pokeList$$.addEventListener('click', allPoke);
 
 function allPoke() {
     searchPokemons();
@@ -101,4 +101,4 @@ const createPokemon = (pokemon, id) => {
     cardContainer.appendChild(cardBack);
     pokemonContainer.appendChild(flipCard);
 }
-searchPokemons();
+// searchPokemons();
