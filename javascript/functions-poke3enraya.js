@@ -1,4 +1,12 @@
 'use strict';
+const board$$ = document.querySelector('.notBoard');
+const gameBoy$$ = document.querySelector('#gameboy');
+
+gameBoy$$.addEventListener('click', board);
+
+function board() {
+    board$$.classList.add('boardVis');
+}
 
 let turn = true;
 const moveArray = new Array(9).fill(null);
