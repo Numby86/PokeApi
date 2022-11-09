@@ -5,18 +5,16 @@ const pokebalImg$$ = document.querySelector('#pokeClass');
 
 const pokemonsTypes = ["grass", "water", "fire", "flying", "bug", "poison", "normal", "electric", "ground", "fairy", "fighting", "psychic", "steel", "ice", "ghost", "dragon"];
 
-// pokebalImg$$.addEventListener('click', iconsPoke);
+ pokebalImg$$.addEventListener('click', iconsPoke);
 
 const searchTypes = async (type) => {
-  console.log('nos llego', type);
   const pokemonRequests = [];
-  for (let i = 1; i <= 151; i++){
+  for (let i = 1; i <= 17; i++){
     const promisePokemon = fetch('https://pokeapi.co/api/v2/type/' + type).then(res => res.json());
       pokemonRequests.push(promisePokemon);  
     }
   Promise.all(pokemonRequests).then(results => {
     if(results){
-      console.log(results);
       results[0].pokemon.forEach((pokemon, index) => {
           createPokemon(pokemon);
       });
@@ -73,7 +71,7 @@ const createPokemon = (pokemon) => {
   div$$.appendChild(card);
 }
 
-function noName(){
+function iconsPoke(){
 for (let i = 0; i < pokemonsTypes.length; i++) {
     const pokemonType = pokemonsTypes[i];
     const buttonImg = document.createElement('button');
@@ -86,8 +84,7 @@ for (let i = 0; i < pokemonsTypes.length; i++) {
     div$$.appendChild(buttonImg);
   }
 }
-noName();
-
+buttonImg.addEventListener('click', searchTypes(buttonImg.value));
 
 
 // function iconsPoke (){

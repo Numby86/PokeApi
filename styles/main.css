@@ -474,15 +474,15 @@ h1 {
 }
 
 .main_div3 button {
-  height: 120px;
-  width: 120px;
-  font-size: 110px;
+  height: 180px;
+  width: 180px;
+  font-size: 150px;
   font-weight: bold;
   color: red;
   -webkit-text-stroke: 1.5px black;
   grid-row: span 1;
   grid-column: span 1;
-  border: 4px solid rgb(130, 130, 130);
+  border: 3px solid rgb(130, 130, 130);
   padding: 3px;
   background-color: white;
 }
@@ -494,21 +494,22 @@ h1 {
 }
 
 #winner {
-  font-size: 40px;
+  font-size: 60px;
   font-weight: bold;
   color: red;
+  -webkit-text-stroke: 1.5px black;
+  text-transform: uppercase;
 }
 
 .button1 {
-  background: url("../../images/images_tres-en-raya/bulba.png");
+  background: url("../../images/dibus/bulbasaur.png");
   background-size: cover;
   background-position: center;
-  background-position-y: -5px;
   background-repeat: no-repeat;
 }
 
 .button2 {
-  background: url("../../images/images_tres-en-raya/charmander.png");
+  background: url("../../images/dibus/squirtle.png");
   background-size: cover;
   background-position: center;
   background-position-y: 0px;
@@ -516,7 +517,7 @@ h1 {
 }
 
 .button3 {
-  background: url("../../images/images_tres-en-raya/squirtle.png");
+  background: url("../../images/dibus/charmander.png");
   background-size: cover;
   background-position: center;
   background-position-y: -5px;
@@ -524,49 +525,43 @@ h1 {
 }
 
 .button4 {
-  background: url("../../images/images_tres-en-raya/pikachu.png");
+  background: url("../../images/dibus/pikachu.png");
   background-size: cover;
   background-position: center;
-  background-position-y: -15px;
   background-repeat: no-repeat;
 }
 
 .button5 {
-  background: url("../../images/images_tres-en-raya/snorlax.png");
-  background-size: 115px;
+  background: url("../../images/dibus/snorlax.png");
+  background-size: cover;
   background-position: center;
-  background-position-y: 25px;
   background-repeat: no-repeat;
 }
 
 .button6 {
-  background: url("../../images/images_tres-en-raya/clefable.png");
+  background: url("../../images/dibus/evee.png");
   background-size: cover;
   background-position: center;
-  background-position-y: -15px;
   background-repeat: no-repeat;
 }
 
 .button7 {
-  background: url("../../images/images_tres-en-raya/magikarp.png");
-  background-size: cover;
+  background: url("../../images/dibus/arcanine.png");
+  background-size: 200px;
   background-position: center;
-  background-position-y: 0px;
   background-repeat: no-repeat;
 }
 
 .button8 {
-  background: url("../../images/images_tres-en-raya/arcanine.png");
-  background-size: 120px;
+  background: url("../../images/dibus/gastly.png");
+  background-size: 200px;
   background-position: center;
-  background-position-y: 25px;
   background-repeat: no-repeat;
 }
 
 .button9 {
-  background: url("../../images/images_tres-en-raya/gengar.png");
-  background-size: cover;
+  background: url("../../images/dibus/geodude.png");
+  background-size: 190px;
   background-position: center;
-  background-position-y: 5px;
   background-repeat: no-repeat;
 }/*# sourceMappingURL=main.css.map */

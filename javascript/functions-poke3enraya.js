@@ -3,11 +3,11 @@
 const gameBoy$$ = document.querySelector('#gameboy');
 const main$$ = document.querySelector('.main');
 
-gameBoy$$.addEventListener('click', board);
+//gameBoy$$.addEventListener('click', board);
 
-function board() {
-    createBoard();
-}
+// function board() {
+//     createBoard();
+// }
 
 const createBoard = () => {
 
@@ -48,10 +48,10 @@ const createBoard = () => {
             winner(2, 5, 8) ||
             winner(0, 4, 8) ||
             winner(2, 4, 6))
-            document.querySelector('#winner').textContent = `Ganó el PokEquipo "${turn ? 'X' : 'O'}" `;
+            document.querySelector('#winner').textContent = `Ganó el PokEquipo > ${turn ? 'X' : 'O'} < `;
             turn = !turn;
         });
     });
 }
-
-export { board } ;
+createBoard();
+//export { board } ;
