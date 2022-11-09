@@ -13,6 +13,13 @@ const pokemonsTypes = ["grass", "water", "fire", "flying", "bug", "poison", "nor
 
 function types () {
   pokebalImg$$.addEventListener('click', iconsPoke);
+  // const buttonImg = document.querySelectorAll('.button');
+  // buttonImg.addEventListener('click', () => {
+  //   myDiv.remove();
+  // });
+  // myDiv2.addEventListener('click', () => {
+  //   myDiv2.remove();
+  // });
 }
 const searchTypes = async (type) => {
   const pokemonRequests = [];

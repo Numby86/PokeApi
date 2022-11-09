@@ -1,13 +1,16 @@
 'use strict';
 
+const main$$ = document.querySelector('.main');
 const pokemonContainer = document.getElementById('list-pokemons');
 const input = document.getElementById('main__div2_searchPoke');
-const button = document.getElementById('main__div2_button');
 const form = document.getElementById('formulario');
 
 const busca = (event) => {
     event.preventDefault();
     searchPokemon(input.value);
+    pokemonContainer.addEventListener('click', () => {
+        pokemonContainer.remove();
+    });
 }
 
 form.addEventListener('submit', busca);

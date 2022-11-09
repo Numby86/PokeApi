@@ -1,11 +1,15 @@
 'use strict';
 
+const main$$ = document.querySelector('.main');
 const pokemonContainer = document.querySelector('#list-pokemons');
 const pokeList$$ = document.querySelector('#pokeList');
 
 function eventPoke() {
     pokeList$$.addEventListener('click', allPoke);
-}   
+    pokemonContainer.addEventListener('click', () => {
+        pokemonContainer.remove();
+    });
+}
 
 function allPoke() {
     searchPokemons();
