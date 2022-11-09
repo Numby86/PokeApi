@@ -3,11 +3,11 @@
 const gameBoy$$ = document.querySelector('#gameboy');
 const main$$ = document.querySelector('.main');
 
-//gameBoy$$.addEventListener('click', board);
+gameBoy$$.addEventListener('click', board);
 
-// function board() {
-//     createBoard();
-// }
+function board() {
+    createBoard();
+}
 
 const createBoard = () => {
 
@@ -53,5 +53,4 @@ const createBoard = () => {
         });
     });
 }
-createBoard();
-//export { board } ;
+export { board } ;
