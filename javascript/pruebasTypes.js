@@ -1,15 +1,39 @@
-'use strict';
+const pokemonsTypes = [
+  "grass",
+  "water",
+  "fire",
+  "flying",
+  "bug",
+  "poison",
+  "normal",
+  "electric",
+  "ground",
+  "fairy",
+  "fighting",
+  "psychic",
+  "steel",
+  "ice",
+  "ghost",
+  "dragon",
+];
 
 const pokemonContainer = document.querySelector('#list-pokemons');
 const pokeList$$ = document.querySelector('#pokeList');
 
-function eventPoke() {
-    pokeList$$.addEventListener('click', allPoke);
-}   
-
-function allPoke() {
-    searchPokemons();
-}
+function iconsPoke(){
+    for (let i = 0; i < pokemonsTypes.length; i++) {
+        const pokemonType = pokemonsTypes[i];
+        const buttonImg = document.createElement('button');
+        buttonImg.classList.add('buttonTypes');
+        buttonImg.id = pokemonType;
+        const simbolsIcon = document.createElement("img");
+        simbolsIcon.classList.add('simbolType', pokemonType);
+        simbolsIcon.setAttribute("src", `./images/simbols-type/${pokemonType}.svg`);
+        buttonImg.appendChild(simbolsIcon);
+        pokemonContainer.appendChild(buttonImg);
+        buttonImg.addEventListener('click', () => searchPokemons());
+      }
+    }
 
 const searchPokemons = async() => {
     const pokemonRequests = [];
@@ -105,4 +129,4 @@ const createPokemon = (pokemon, id) => {
     pokemonContainer.appendChild(flipCard);
 }
 
-export { eventPoke } ;
+iconsPoke();
