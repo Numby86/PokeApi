@@ -73,3 +73,5 @@ function createPokemon(pokemon) {
 
     pokemonContainer.appendChild(completeCard);
 }
+
+export { busca } ;

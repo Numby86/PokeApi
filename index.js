@@ -1,5 +1,10 @@
-import {pokemonContainer, allPoke, searchPokemons, createPokemon } from "./javascript/functions.js";
+import { eventPoke } from "./javascript/functions.js";
+import { busca } from "./javascript/functions-inp-btn.js";
+//import {  } from "./javascript/functions-types.js";
+import { board } from "./javascript/functions-poke3enraya.js";
 
-searchPokemons();
-createPokemon();
-allPoke();
+
+
+eventPoke();
+busca();
+board();

@@ -1,5 +1,5 @@
 'use strict';
-const board$$ = document.querySelector('.notBoard');
+
 const gameBoy$$ = document.querySelector('#gameboy');
 const main$$ = document.querySelector('.main');
 
@@ -53,3 +53,5 @@ const createBoard = () => {
         });
     });
 }
+
+export { board } ;

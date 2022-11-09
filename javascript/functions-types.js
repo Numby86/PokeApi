@@ -10,10 +10,10 @@ const pokemonsTypes = ["grass", "water", "fire", "flying", "bug", "poison", "nor
 const searchTypes = async (type) => {
   console.log('nos llego', type);
   const pokemonRequests = [];
-  //for (let i = 1; i <= 151; i++)
+  for (let i = 1; i <= 151; i++){
     const promisePokemon = fetch('https://pokeapi.co/api/v2/type/' + type).then(res => res.json());
       pokemonRequests.push(promisePokemon);  
-  
+    }
   Promise.all(pokemonRequests).then(results => {
     if(results){
       console.log(results);
@@ -73,11 +73,20 @@ const createPokemon = (pokemon) => {
   div$$.appendChild(card);
 }
 
-
-
+function noName(){
 for (let i = 0; i < pokemonsTypes.length; i++) {
     const pokemonType = pokemonsTypes[i];
+    const buttonImg = document.createElement('button');
+    buttonImg.classList.add('buttonTypes');
+    buttonImg.value = pokemonType;
+    const simbolsIcon = document.createElement("img");
+    simbolsIcon.classList.add('simbolType', pokemonType);
+    simbolsIcon.setAttribute("src", `./images/simbols-type/${pokemonType}.svg`);
+    buttonImg.appendChild(simbolsIcon);
+    div$$.appendChild(buttonImg);
   }
+}
+noName();
 
 
 

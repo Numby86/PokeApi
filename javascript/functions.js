@@ -3,7 +3,9 @@
 const pokemonContainer = document.querySelector('#list-pokemons');
 const pokeList$$ = document.querySelector('#pokeList');
 
-pokeList$$.addEventListener('click', allPoke);
+function eventPoke() {
+    pokeList$$.addEventListener('click', allPoke);
+}
 
 function allPoke() {
     searchPokemons();
@@ -21,6 +23,7 @@ const searchPokemons = async() => {
         });
     })
 }
+
 const createPokemon = (pokemon, id) => {
     const card = document.createElement('div');
     card.classList.add('pokemon_card');
@@ -101,4 +104,5 @@ const createPokemon = (pokemon, id) => {
     cardContainer.appendChild(cardBack);
     pokemonContainer.appendChild(flipCard);
 }
-// searchPokemons();
+
+export { eventPoke } ;
