@@ -1,6 +1,5 @@
 'use strict';
 
-const main$$ = document.querySelector('.main');
 const pokemonContainer = document.getElementById('list-pokemons');
 const input = document.getElementById('main__div2_searchPoke');
 const form = document.getElementById('formulario');

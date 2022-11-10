@@ -1,16 +1,16 @@
 'use strict';
 
 const pokemonContainer = document.querySelector('#list-pokemons');
-const pokeList$$ = document.querySelector('#pokeList');
+const pokeShiny$$ = document.querySelector('#shiny');
 
-function eventPoke() {
-    pokeList$$.addEventListener('click', allPoke);
+function shinyPoke() {
+    pokeShiny$$.addEventListener('click', allShiny);
     pokemonContainer.addEventListener('click', () => {
         pokemonContainer.remove();
     });
 }
 
-function allPoke() {
+function allShiny() {
     searchPokemons();
 }
 
@@ -35,7 +35,7 @@ const createPokemon = (pokemon, id) => {
     spriteContainer.classList.add('image_card');
 
     const imagePokemon = document.createElement('img');
-    imagePokemon.src = pokemon.sprites.other.dream_world.front_default;
+    imagePokemon.src = pokemon.sprites.front_shiny;
     spriteContainer.appendChild(imagePokemon);
 
     const numPoke = document.createElement('span');
@@ -93,11 +93,11 @@ const createPokemon = (pokemon, id) => {
     divFeatures.classList.add('features');
 
     const abilityPoke = document.createElement('p');
-    abilityPoke.textContent = '<<abi: ' + pokemon.abilities[0].ability.name + '>>';
+    abilityPoke.textContent = '<< height: ' + pokemon.height + ' >>';
     divFeatures.appendChild(abilityPoke);
 
     const movePoke = document.createElement('p');
-    movePoke.textContent = '<<move: ' + pokemon.moves[0].move.name + '>>';
+    movePoke.textContent = '<< weight: ' + pokemon.weight + ' >>';
     divFeatures.appendChild(movePoke);
 
     cardBack.appendChild(pokeTypes);
@@ -107,5 +107,6 @@ const createPokemon = (pokemon, id) => {
     cardContainer.appendChild(cardBack);
     pokemonContainer.appendChild(flipCard);
 }
+shinyPoke();
 
-export { eventPoke } ;
+export { shinyPoke };
