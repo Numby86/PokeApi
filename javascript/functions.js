@@ -6,7 +6,7 @@ const pokeList$$ = document.querySelector('#pokeList');
 function eventPoke() {
     pokeList$$.addEventListener('click', allPoke);
     pokemonContainer.addEventListener('click', () => {
-        pokemonContainer.remove();
+        pokemonContainer.innerHTML = '';
     });
 }
 

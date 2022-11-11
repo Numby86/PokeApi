@@ -13,19 +13,17 @@ const pokemonsTypes = ["grass", "water", "fire", "flying", "bug", "poison", "nor
 
 function types () {
   pokebalImg$$.addEventListener('click', iconsPoke);
-  // const buttonImg = document.querySelectorAll('.button');
-  // buttonImg.addEventListener('click', () => {
-  //   myDiv.remove();
-  // });
-  // myDiv2.addEventListener('click', () => {
-  //   myDiv2.remove();
-  // });
+  myDiv2.addEventListener('click',() => {
+    myDiv.innerHTML = '';
+    myDiv2.innerHTML = '';
+  })
 }
 const searchTypes = async (type) => {
   const pokemonRequests = [];
   for (let i = 1; i <= 20; i++){
-    const promisePokemon = fetch('https://pokeapi.co/api/v2/type/' + type).then(res => res.json());
-      pokemonRequests.push(promisePokemon);  
+    const promisePokemon = fetch('https://pokeapi.co/api/v2/type/' + type)
+    .then(res => res.json());
+    pokemonRequests.push(promisePokemon);  
     }
   Promise.all(pokemonRequests).then(results => {
     if(results){
@@ -37,6 +35,7 @@ const searchTypes = async (type) => {
 };
 
 const createPokemons = (pokemons) => {
+
   const card = document.createElement('div');
   card.classList.add('only_type');
 
@@ -44,7 +43,6 @@ const createPokemons = (pokemons) => {
   namePoke.textContent = pokemons.pokemon.name;
 
   card.appendChild(namePoke);
-
   myDiv2.appendChild(card);
 }
 
@@ -55,7 +53,10 @@ function iconsPoke(){
     const buttonImg = document.createElement('button');
     buttonImg.classList.add('buttonTypes');
     buttonImg.value = pokemonType;
-    buttonImg.addEventListener('click', () => searchTypes(buttonImg.value));
+    buttonImg.addEventListener('click', () => {
+      searchTypes(buttonImg.value);
+      myDiv2.innerHTML = '';
+    });
     const simbolsIcon = document.createElement("img");
     simbolsIcon.classList.add('simbolType', pokemonType);
     simbolsIcon.setAttribute("src", `./images/simbols-type/${pokemonType}.svg`);

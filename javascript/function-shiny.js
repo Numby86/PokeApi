@@ -6,7 +6,7 @@ const pokeShiny$$ = document.querySelector('#shiny');
 function shinyPoke() {
     pokeShiny$$.addEventListener('click', allShiny);
     pokemonContainer.addEventListener('click', () => {
-        pokemonContainer.remove();
+        pokemonContainer.innerHTML = '';
     });
 }
 

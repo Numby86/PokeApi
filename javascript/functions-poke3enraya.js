@@ -7,6 +7,14 @@ gameBoy$$.addEventListener('click', board);
 
 function board() {
     createBoard();
+    // if (winner === true){
+    //     myDiv$$.addEventListener('click', ()=>{
+    //         myDiv$$.innerHTML = '';
+    //     })
+    // }
+    main$$.addEventListener('click', () => {
+        myDiv$$.innerHTML = '';
+    });
 }
 
 const createBoard = () => {
