@@ -7,8 +7,11 @@ const form = document.getElementById('formulario');
 const busca = (event) => {
     event.preventDefault();
     searchPokemon(input.value);
+    form.addEventListener('click', () => {
+        pokemonContainer.innerHTML = '';
+    });
     pokemonContainer.addEventListener('click', () => {
-        pokemonContainer.remove();
+        pokemonContainer.innerHTML = '';
     });
 }
 
