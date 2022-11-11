@@ -4,29 +4,27 @@ const pokemonContainer = document.querySelector('#list-pokemons');
 const pokeShiny$$ = document.querySelector('#shiny');
 
 function shinyPoke() {
-    pokeShiny$$.addEventListener('click', allShiny);
-    pokemonContainer.addEventListener('click', () => {
-        pokemonContainer.innerHTML = '';
+    pokeShiny$$.addEventListener('click', () => {
+        searchRandomShiny();
+        pokeShiny$$.addEventListener('click', () => {
+            pokemonContainer.innerHTML = '';
+        })
+        pokemonContainer.addEventListener('click', () => {
+            pokemonContainer.innerHTML = '';
+        });
     });
 }
 
-function allShiny() {
-    searchPokemons();
-}
+const generateRandomNuber = () => Math.floor(Math.random() * 151) + 1;
 
-const searchPokemons = async() => {
-    const pokemonRequests = [];
-    for (let i = 1; i <= 151; i++) {
-        const promisePokemon = fetch('https://pokeapi.co/api/v2/pokemon/' + i).then(res => res.json());
-        pokemonRequests.push(promisePokemon);  
-    }
-    Promise.all(pokemonRequests).then(results => {
-        results.forEach((pokemon, index) => {
-            createPokemon(pokemon, index + 1);
-        });
-    })
+function searchRandomShiny() {
+    const url = 'https://pokeapi.co/api/v2/pokemon/' + generateRandomNuber();
+    fetch(url)
+      .then((res) => res.json())
+      .then((pokemon) => {
+        createPokemon(pokemon);
+      });
 }
-
 const createPokemon = (pokemon, id) => {
     const card = document.createElement('div');
     card.classList.add('pokemon_card');
@@ -70,8 +68,8 @@ const createPokemon = (pokemon, id) => {
     cardContainer.classList.add("card-container");
 
     flipCard.appendChild(cardContainer);
-
     const cardBack = document.createElement("div");
+
     cardBack.classList.add("card-back");
 
     const pokeTypes = document.createElement('h3')
@@ -108,5 +106,6 @@ const createPokemon = (pokemon, id) => {
     pokemonContainer.appendChild(flipCard);
 }
 shinyPoke();
-
 export { shinyPoke };
+
+
