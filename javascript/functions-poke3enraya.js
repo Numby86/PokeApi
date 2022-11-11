@@ -7,7 +7,7 @@ gameBoy$$.addEventListener('click', board);
 
 function board() {
     createBoard();
-    // if (winner === true){
+    // if (winner == true){
     //     myDiv$$.addEventListener('click', ()=>{
     //         myDiv$$.innerHTML = '';
     //     })
@@ -58,6 +58,11 @@ const createBoard = () => {
             winner(2, 4, 6))
             document.querySelector('#winner').textContent = `Ganó el PokEquipo > ${turn ? 'X' : 'O'} < `;
             turn = !turn;
+            // if(winner == true){
+            //     myDiv$$.addEventListener('click', () => {
+            //         myDiv$$.innerHTML = '';
+            //     })
+            // }
         });
     });
 }

@@ -62,12 +62,15 @@ function createPokemon(pokemon) {
 
     if(type2 === 'flying' && type1 === 'normal') {
         spriteContainer.classList.add(type2);
+        typePoke.classList.add(type2);
     }
     else if(type2 === 'steel'){
         spriteContainer.classList.add(type2);
+        typePoke.classList.add(type2);
     }
     else{
         spriteContainer.classList.add(type1);
+        typePoke.classList.add(type1);
     }
 
     completeCard.appendChild(spriteContainer);
