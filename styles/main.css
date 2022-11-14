@@ -50,7 +50,7 @@ table {
 body {
   font-family: "cascadia code";
   font-weight: bold;
-  background: linear-gradient(-45deg, rgb(160, 160, 160), rgb(255, 255, 255), rgb(160, 160, 160), rgb(255, 255, 255), rgb(160, 160, 160), rgb(255, 255, 255));
+  background: linear-gradient(-45deg, rgb(225, 225, 225), rgb(255, 255, 255), rgb(225, 225, 225), rgb(255, 255, 255), rgb(225, 225, 225), rgb(255, 255, 255));
   background-size: 400% 400%;
   -webkit-animation: fondoLive 2.5s ease infinite;
           animation: fondoLive 2.5s ease infinite;
@@ -97,11 +97,14 @@ h1 {
   width: 100px;
   height: 100px;
   margin-left: 20%;
+}
+
+#pokeList:hover, #pokeClass:hover {
   -webkit-animation: roll 2s 3;
           animation: roll 2s 3;
 }
 
-#gameboy, #shiny {
+#gameboy:hover, #shiny:hover {
   -webkit-animation: move 0.4s 10;
           animation: move 0.4s 10;
 }
@@ -526,6 +529,20 @@ h1 {
   color: red;
   -webkit-text-stroke: 1.5px black;
   text-transform: uppercase;
+}
+
+.resetOff {
+  display: none;
+}
+
+.reset {
+  width: 70px;
+  border: 1px black solid;
+  background-color: gray;
+  color: white;
+  text-transform: uppercase;
+  display: block;
+  font-size: 20px;
 }
 
 .button1 {

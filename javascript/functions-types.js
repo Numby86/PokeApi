@@ -1,22 +1,28 @@
 'use trict';
 
-const divMain$$ = document.querySelector('.main');
+const main$$ = document.querySelector('.main');
 const myDiv = document.createElement('div');
 const myDiv2 = document.createElement('div');
 myDiv.classList.add('icons-and-types');
-divMain$$.appendChild(myDiv);
-myDiv2.classList.add('icons-and-types');
-divMain$$.appendChild(myDiv2);
+main$$.appendChild(myDiv);
+myDiv2.classList.add('icons-and-types', 'allPokeType');
+main$$.appendChild(myDiv2);
 const pokebalImg$$ = document.querySelector('#pokeClass');
 
 const pokemonsTypes = ["grass", "water", "fire", "flying", "bug", "poison", "normal", "electric", "ground", "fairy", "fighting", "psychic", "steel", "ice", "ghost", "dragon"];
 
-function types () {
-  pokebalImg$$.addEventListener('click', iconsPoke);
-  myDiv2.addEventListener('click',() => {
-    myDiv.innerHTML = '';
-    myDiv2.innerHTML = '';
-  })
+function types() {
+  pokebalImg$$.addEventListener("click", () => {
+    const pokemonContainer = document.querySelector('#list-pokemons');
+    const myDiv$$ = document.querySelector('.main_div3');
+    pokemonContainer.innerHTML = "";
+    myDiv$$.innerHTML = "";
+  });
+  pokebalImg$$.addEventListener("click", iconsPoke);
+  myDiv2.addEventListener("click", () => {
+    myDiv.innerHTML = "";
+    myDiv2.innerHTML = "";
+  });
 }
 const searchTypes = async (type) => {
   const pokemonRequests = [];
@@ -34,8 +40,8 @@ const searchTypes = async (type) => {
   })
 };
 
-const createPokemons = (pokemons) => {
-
+const createPokemons = (pokemons, name) => {
+  
   const card = document.createElement('div');
   card.classList.add('only_type');
 

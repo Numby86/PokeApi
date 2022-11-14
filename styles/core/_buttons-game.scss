@@ -27,6 +27,18 @@
     -webkit-text-stroke: 1.5px black;
     text-transform: uppercase;
 }
+.resetOff{
+    display: none;
+}
+.reset{
+    width: 70px;
+    border: 1px black solid;
+    background-color: gray;
+    color: white;
+    text-transform: uppercase;
+    display: block;
+    font-size: 20px;
+}
 .button1{
     background: url('../../images/dibus/bulbasaur.png');
     background-size: cover;

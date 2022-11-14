@@ -4,6 +4,15 @@ const pokemonContainer = document.querySelector("#list-pokemons");
 const pokeShiny$$ = document.querySelector("#shiny");
 
 function shinyPoke() {
+  pokeShiny$$.addEventListener('click', () => {
+    pokemonContainer.innerHTML = "";
+    const myDiv = document.querySelector(".icons-and-types");
+    const myDiv2 = document.querySelector(".allPokeType");
+    const myDiv$$ = document.querySelector(".main_div3");
+    myDiv.innerHTML = "";
+    myDiv2.innerHTML = "";
+    myDiv$$.innerHTML = "";
+});
   pokeShiny$$.addEventListener("click", () => {
     searchRandomShiny();
     pokeShiny$$.addEventListener("click", () => {
@@ -80,4 +89,5 @@ function createPokemon(pokemon) {
 }
 
 shinyPoke();
+
 export { shinyPoke };

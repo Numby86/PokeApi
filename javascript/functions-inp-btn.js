@@ -6,8 +6,18 @@ const form = document.getElementById('formulario');
 
 const busca = (event) => {
     event.preventDefault();
+    input.addEventListener('click', () => {
+        pokemonContainer.innerHTML = "";
+        const myDiv = document.querySelector(".icons-and-types");
+        const myDiv2 = document.querySelector(".allPokeType");
+        const myDiv$$ = document.querySelector(".main_div3");
+        myDiv.innerHTML = "";
+        myDiv2.innerHTML = "";
+        myDiv$$.innerHTML = "";
+    });
     searchPokemon(input.value);
-    form.addEventListener('click', () => {
+    input.addEventListener('click', () => {
+        input.value = '';
         pokemonContainer.innerHTML = '';
     });
     pokemonContainer.addEventListener('click', () => {

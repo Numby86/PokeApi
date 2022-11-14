@@ -4,6 +4,15 @@ const pokemonContainer = document.querySelector('#list-pokemons');
 const pokeList$$ = document.querySelector('#pokeList');
 
 function eventPoke() {
+    pokeList$$.addEventListener('click', () => {
+        pokemonContainer.innerHTML = "";
+        const myDiv = document.querySelector(".icons-and-types");
+        const myDiv2 = document.querySelector(".allPokeType");
+        const myDiv$$ = document.querySelector(".main_div3");
+        myDiv.innerHTML = "";
+        myDiv2.innerHTML = "";
+        myDiv$$.innerHTML = "";
+    });
     pokeList$$.addEventListener('click', allPoke);
     pokemonContainer.addEventListener('click', () => {
         pokemonContainer.innerHTML = '';
