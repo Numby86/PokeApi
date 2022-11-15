@@ -6,18 +6,13 @@ const main$$ = document.querySelector(".main");
 gameBoy$$.addEventListener("click", board);
 
 function board() {
-  gameBoy$$.addEventListener("click", () => {
+    createBoard();
     const pokemonContainer = document.querySelector("#list-pokemons");
     const myDiv = document.querySelector(".icons-and-types");
     const myDiv2 = document.querySelector(".allPokeType");
     pokemonContainer.innerHTML = "";
     myDiv.innerHTML = "";
     myDiv2.innerHTML = "";
-  });
-  createBoard();
-  main$$.addEventListener("click", () => {
-    myDiv$$.innerHTML = "";
-  });
 }
 
 const createBoard = () => {

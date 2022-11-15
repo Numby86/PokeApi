@@ -5,25 +5,22 @@ const input = document.getElementById('main__div2_searchPoke');
 const form = document.getElementById('formulario');
 
 const busca = (event) => {
-    event.preventDefault();
-    input.addEventListener('click', () => {
-        pokemonContainer.innerHTML = "";
-        const myDiv = document.querySelector(".icons-and-types");
-        const myDiv2 = document.querySelector(".allPokeType");
-        const myDiv$$ = document.querySelector(".main_div3");
-        myDiv.innerHTML = "";
-        myDiv2.innerHTML = "";
-        myDiv$$.innerHTML = "";
-    });
-    searchPokemon(input.value);
-    input.addEventListener('click', () => {
-        input.value = '';
-        pokemonContainer.innerHTML = '';
-    });
-    pokemonContainer.addEventListener('click', () => {
-        pokemonContainer.innerHTML = '';
-    });
-}
+  event.preventDefault();
+  input.addEventListener("click", () => {
+    const myDiv = document.querySelector(".icons-and-types");
+    const myDiv2 = document.querySelector(".allPokeType");
+    const myDiv$$ = document.querySelector(".main_div3");
+    pokemonContainer.innerHTML = "";
+    myDiv.innerHTML = "";
+    myDiv2.innerHTML = "";
+    myDiv$$.innerHTML = "";
+    input.value = "";
+  });
+  searchPokemon(input.value);
+  pokemonContainer.addEventListener("click", () => {
+    pokemonContainer.innerHTML = "";
+  });
+};
 
 form.addEventListener('submit', busca);
 
