@@ -31,7 +31,6 @@ const pokemonsTypes = [
 ];
 
 function iconsPoke() {
-
   pokemonContainer.innerHTML = "";
   pokemonContainer2.innerHTML = "";
 
@@ -50,12 +49,13 @@ function iconsPoke() {
     buttonImg.appendChild(simbolsIcon);
     myDiv.appendChild(buttonImg);
   }
-  
 }
 
 function types() {
   pokebalImg$$.addEventListener("click", () => {
-    
+    //PROBE PONIENDOLO AQUI Y TAMPOCO...
+    // pokemonContainer.innerHTML = "";
+    // pokemonContainer2.innerHTML = "";
     iconsPoke();
   });
 }
