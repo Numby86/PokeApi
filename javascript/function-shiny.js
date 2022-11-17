@@ -1,26 +1,13 @@
 "use strict";
 
 const pokemonContainer = document.querySelector("#list-pokemons");
+const pokemonContainer2 = document.querySelector(".main__div2_list-pokemons2");
+const divs = document.querySelector(".allPokeType");
 const pokeShiny$$ = document.querySelector("#shiny");
 
 function shinyPoke() {
-  pokeShiny$$.addEventListener('click', () => {
-    pokemonContainer.innerHTML = "";
-    const myDiv = document.querySelector(".icons-and-types");
-    const myDiv2 = document.querySelector(".allPokeType");
-    const myDiv$$ = document.querySelector(".main_div3");
-    myDiv.innerHTML = "";
-    myDiv2.innerHTML = "";
-    myDiv$$.innerHTML = "";
-});
   pokeShiny$$.addEventListener("click", () => {
     searchRandomShiny();
-    pokeShiny$$.addEventListener("click", () => {
-      pokemonContainer.innerHTML = "";
-    });
-    pokemonContainer.addEventListener("click", () => {
-      pokemonContainer.innerHTML = "";
-    });
   });
 }
 
@@ -36,6 +23,10 @@ function searchRandomShiny() {
 }
 
 function createPokemon(pokemon) {
+  divs.innerHTML = "";
+  pokemonContainer.innerHTML = "";
+  pokemonContainer2.innerHTML = "";
+
   const completeCard = document.createElement("div");
   completeCard.classList.add("pokemon_completeCard");
 

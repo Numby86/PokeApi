@@ -162,6 +162,11 @@ h1 {
   margin: 30px;
 }
 
+#list-pokemos_2 {
+  display: flex;
+  justify-content: center;
+}
+
 .icons-and-types {
   margin: auto 20%;
   display: flex;
