@@ -10,7 +10,7 @@ function shinyPoke() {
     searchRandomShiny();
   });
 }
-
+// CREO UN NUMERO RANDOM Y LUEGO SE LO APLICO A MI URL DE FETCH
 const generateRandomNuber = () => Math.floor(Math.random() * 151) + 1;
 
 function searchRandomShiny() {
@@ -21,7 +21,7 @@ function searchRandomShiny() {
       createPokemon(pokemon);
     });
 }
-
+// CREO CARTA CON IMG SHINY Y OTRAS CARACTERISTICAS DEL POKEMON DIFERENTES, TB SE PINTAN DIFERENTE SEGUN TYPE DE POKEMON
 function createPokemon(pokemon) {
   divs.innerHTML = "";
   pokemonContainer.innerHTML = "";

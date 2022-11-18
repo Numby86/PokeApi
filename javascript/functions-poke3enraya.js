@@ -4,18 +4,18 @@ const gameBoy$$ = document.querySelector("#gameboy");
 const pokemonContainer = document.querySelector("#list-pokemons");
 const pokemonContainer2 = document.querySelector(".main__div2_list-pokemons2");
 
-gameBoy$$.addEventListener("click", () => {
-  const divs = document.querySelector('.allPokeType');
-  divs.innerHTML = "";
-  pokemonContainer.innerHTML = "";
-  pokemonContainer2.innerHTML = "";
-  board();
-})
 
+// EVENTOS PARA LIMPIAR Y CREAR TABLERO
 function board() {
+  gameBoy$$.addEventListener("click", () => {
+    const divs = document.querySelector('.allPokeType');
+    divs.innerHTML = "";
+    pokemonContainer.innerHTML = "";
+    pokemonContainer2.innerHTML = "";
     createBoard();
+  })
 }
-
+// CREO EL TABLERO CON BUCLE FOR Y YA LE AÑADO TODAS LAS CLASES A BUTTON ETC, Y METO LOGICA DEL JUEGO
 function createBoard() {
 
   const myDiv$$ = document.createElement("div");

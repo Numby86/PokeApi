@@ -6,9 +6,7 @@ const divs = document.querySelector(".allPokeType");
 const myDiv = document.createElement("div");
 const myDiv2 = document.createElement("div");
 myDiv.classList.add("icons-and-types");
-divs.appendChild(myDiv);
 myDiv2.classList.add("icons-and-types");
-divs.appendChild(myDiv2);
 const pokebalImg$$ = document.querySelector("#pokeClass");
 
 const pokemonsTypes = [
@@ -29,11 +27,12 @@ const pokemonsTypes = [
   "ghost",
   "dragon",
 ];
-
+// CREO ICONOS CON CLICK EN POKEBALL Q SE PINTAN Y SE PONEN SU CLASE POR SU TYPE CON UN FOR, DESPUES CLICANDO CADA IGONO TRAE LISTADO CON TODOS LOS POKEMON DE ESA CLASE
 function iconsPoke() {
   pokemonContainer.innerHTML = "";
   pokemonContainer2.innerHTML = "";
-
+  divs.appendChild(myDiv);
+  divs.appendChild(myDiv2);
   for (let i = 0; i < pokemonsTypes.length; i++) {
     const pokemonType = pokemonsTypes[i];
     const buttonImg = document.createElement("button");
@@ -53,13 +52,10 @@ function iconsPoke() {
 
 function types() {
   pokebalImg$$.addEventListener("click", () => {
-    //PROBE PONIENDOLO AQUI Y TAMPOCO...
-    // pokemonContainer.innerHTML = "";
-    // pokemonContainer2.innerHTML = "";
     iconsPoke();
   });
 }
-
+//BUSQUEDA POR TYPES
 async function searchTypes(type) {
   const pokemonRequests = [];
   for (let i = 1; i <= 20; i++) {
@@ -76,7 +72,7 @@ async function searchTypes(type) {
     }
   });
 }
-
+//CREO LISTADO
 const createPokemons = (pokemons, name) => {
   const card = document.createElement("div");
   card.classList.add("only_type");

@@ -5,7 +5,7 @@ const pokemonContainer2 = document.querySelector(".main__div2_list-pokemons2");
 const divs = document.querySelector(".allPokeType");
 const input = document.getElementById("main__div2_searchPoke");
 const form = document.getElementById("formulario");
-
+// EN EVENTO CREO EL POKEMON CON EL VALOR DE BUSQUEDA (INPUT.VALUE),SE BORRA AL CLICAR EN INPUT
 const busca = (event) => {
   event.preventDefault();
   input.addEventListener("click", () => {
@@ -23,7 +23,7 @@ function searchPokemon(pokemon) {
       createPokemon(data);
     });
 }
-
+// CREO CARTA AMPLIADA EON CARACTERISTICAS SE PINTAN DIFERENTE SEGUN TYPE DE POKEMON
 function createPokemon(pokemon) {
   divs.innerHTML = "";
   pokemonContainer.innerHTML = "";

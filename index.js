@@ -8,6 +8,6 @@ import { shinyPoke } from "./javascript/function-shiny.js";
 
 eventPoke();
 types();
-//board();
+board();
 shinyPoke();
 busca();
